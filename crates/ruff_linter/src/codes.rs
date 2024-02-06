@@ -936,7 +936,7 @@ pub fn code_to_rule(linter: Linter, code: &str) -> Option<(RuleGroup, Rule)> {
         (Flake8Django, "013") => (RuleGroup::Stable, rules::flake8_django::rules::DjangoNonLeadingReceiverDecorator),
 
         // flynt
-        // Reserved: (Flynt, "001") => (RuleGroup::Stable, Rule: :StringConcatenationToFString),
+        (Flynt, "001") => (RuleGroup::Stable, rules::flynt::rules::StringConcatenationToFString),
         (Flynt, "002") => (RuleGroup::Stable, rules::flynt::rules::StaticJoinToFString),
 
         // flake8-todos

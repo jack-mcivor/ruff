@@ -6,8 +6,8 @@ use ruff_source_file::Locator;
 use ruff_text_size::Ranged;
 
 /// ## What it does
-/// Checks for string literals that are explicitly concatenated (using the
-/// `+` operator).
+/// Checks for string literals that are explicitly concatenated over multiple lines
+/// (using the `+` operator).
 ///
 /// ## Why is this bad?
 /// For string literals that wrap across multiple lines, implicit string

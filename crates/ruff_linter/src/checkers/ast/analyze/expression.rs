@@ -1154,6 +1154,9 @@ pub(crate) fn expression(expr: &Expr, checker: &mut Checker) {
             if checker.enabled(Rule::HardcodedSQLExpression) {
                 flake8_bandit::rules::hardcoded_sql_expression(checker, expr);
             }
+            if checker.enabled(Rule::StringConcatenationToFString) {
+                flynt::rules::string_concatenation_to_fstring(checker, expr);
+            }
         }
         Expr::BinOp(ast::ExprBinOp {
             op: Operator::BitOr,
